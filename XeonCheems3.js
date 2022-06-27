@@ -1541,7 +1541,8 @@ const jumlahUser = pendaftar.length
   if (!isInventory){ addInventori(m.sender) }
   if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
   
-const menulist = `┌─❖
+const menulist = `•━━━[ SychoBot]━━━•
+┌─❖
 │「 Hi 👋 」
 └┬❖ 「 ${pushname} 」
 ┌┤✑  How Are You? 😄
@@ -1605,8 +1606,8 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Script 🍜',
-                                    url: `${botscript}`
+                                    displayText: 'Group Whatsapp 🍜',
+                                    url: `${sycho}`
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1636,7 +1637,7 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
                         } else if (setbot.templateDocument) {
                         let buttonmenu = [
         	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
-            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
+            { urlButton: { displayText: `Group Whatsapp 🍜`, url: `${sycho}` } },
             { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
