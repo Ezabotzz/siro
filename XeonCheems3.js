@@ -5163,48 +5163,6 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'remove')
 }
 break
-case 'addxxx': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!isBotAdmins) return replay(mess.botAdmin)
-if (!isAdmins && !isCreator) return replay(mess.admin)
-let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await XeonBotInc.groupParticipantsUpdate(m.chat, [users], 'add')
-}
-break 
-case 'add': {
-	   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!m.isGroup) return replay(mess.group)
-if (!isBotAdmins) return replay(mess.botAdmin)
-if (!isAdmins && !isCreator) return replay(mess.admin)
-    let _participants = participants.map(user => user.id)
-    let users = (await Promise.all(
-        text.split(',')
-            .map(v => v.replace(/[^0-9]/g, ''))
-            .filter(v => v.length > 4 && v.length < 20 && !_participants.includes(v + '@s.whatsapp.net'))
-            .map(async v => [
-                v,
-                await XeonBotInc.onWhatsApp(v + '@s.whatsapp.net')
-            ])
-    )).filter(v => v[1][0]?.exists).map(v => v[0] + '@c.us')
-    const response = await XeonBotInc.query({
-        tag: 'iq',
-        attrs: {
-            type: 'set',
-            xmlns: 'w:g2',
-            to: m.chat,
-        },
-        content: users.map(jid => ({
-            tag: 'add',
-            attrs: {},
-            content: [{ tag: 'participant', attrs: { jid } }]
-        }))
-    })
-}
-
-break
 case 'inspect': case 'inspectgclink': case 'inspectgrouplink': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
