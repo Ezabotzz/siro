@@ -48,15 +48,15 @@ global.socialm = "Instagram : @gadingagani" //ur github or insta name
 global.location = "Indonesia" //ur location
 
 //bot bombdy
-global.botname = "SychoBot" //ur bot name
+global.botname = "Ezabotzz" //ur bot name
 global.websitex = "https://youtube.com/channel/UCfPxifuwrqmfUBy2JaldYAQ" //ur website
 global.sycho = "https://bit.ly/Sycho-RGA"
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
-global.packname = "SychoBot\n\n\n\n\n\n\n🗿🗿🗿🙏 "
+global.packname = "Ezabotzz"
 global.author = "GadingAgani"
 global.themeemoji = "🐶"
 global.reactmoji = "😘"
-global.ownertag = ['12012854669'] //ur owner tag
+global.ownertag = ['0895385592033' /itu/ur owner tag
 global.ownernummenu = ['12012854669'] //ur owner number in menu and all
 global.watermark = "SychoBot" //ur watermark
 global.botscript = "https://github.com/RGA42/siro"
